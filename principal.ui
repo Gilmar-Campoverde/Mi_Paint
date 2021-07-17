@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Principal</class>
+ <widget class="QMainWindow" name="Principal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>691</width>
+    <height>423</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Mi Paint </string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Recursos.qrc">
+    <normaloff>:/Recur/Recursos/roll.png</normaloff>:/Recur/Recursos/roll.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">border-color: rgb(156, 154, 148);
+background-color: rgb(254, 255, 249);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>691</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Archivo">
+    <property name="title">
+     <string>&amp;Archivo</string>
+    </property>
+    <addaction name="actionNuevo"/>
+    <addaction name="actionGuardar"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menu_Estilo">
+    <property name="title">
+     <string>&amp;Estilo</string>
+    </property>
+    <addaction name="actionColor"/>
+    <addaction name="actionAncho"/>
+   </widget>
+   <widget class="QMenu" name="menu_Forma">
+    <property name="title">
+     <string>&amp;Forma</string>
+    </property>
+    <addaction name="actionLibre"/>
+    <addaction name="actionLineas"/>
+    <addaction name="actionRectangulos"/>
+    <addaction name="actionCircunferencia"/>
+   </widget>
+   <addaction name="menu_Archivo"/>
+   <addaction name="menu_Estilo"/>
+   <addaction name="menu_Forma"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNuevo">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recur/Recursos/new.png</normaloff>:/Recur/Recursos/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nuevo</string>
+   </property>
+  </action>
+  <action name="actionGuardar">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recur/Recursos/guardar.png</normaloff>:/Recur/Recursos/guardar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recur/Recursos/door.png</normaloff>:/Recur/Recursos/door.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionColor">
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </action>
+  <action name="actionAncho">
+   <property name="text">
+    <string>Ancho</string>
+   </property>
+  </action>
+  <action name="actionLibre">
+   <property name="text">
+    <string>Libre</string>
+   </property>
+  </action>
+  <action name="actionLineas">
+   <property name="text">
+    <string>Lineas</string>
+   </property>
+  </action>
+  <action name="actionRectangulos">
+   <property name="text">
+    <string>Rectangulos</string>
+   </property>
+  </action>
+  <action name="actionCircunferencia">
+   <property name="text">
+    <string>Circunferencia</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="Recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>
