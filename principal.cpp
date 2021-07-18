@@ -12,7 +12,6 @@ Principal::Principal(QWidget *parent)
     m_imagen->fill(Qt::white);
     //Instanciar el objeto a pintar
     m_painter = new QPainter(m_imagen);
-    m_painter->setRenderHint(QPainter::Antialiasing);
     m_color = Qt::black;
     m_ancho = DEFAULT_ANCHO;
 
@@ -59,7 +58,6 @@ void Principal::mousePressEvent(QMouseEvent *event)
             //Dibujar rectangulo
             int ancho = m_ptFinal.x() - m_ptInicial.y();
             int alto = m_ptFinal.y() - m_ptInicial.y();
-
             QPen pincel;
             pincel.setColor(m_color);
             pincel.setWidth(m_ancho);
@@ -73,7 +71,7 @@ void Principal::mousePressEvent(QMouseEvent *event)
             m_ptInicial = event->pos();
         }else {
             m_ptFinal = event->pos();
-            //Dibujar rectangulo
+            //Dibujar circunferencia
             QPen pincel;
             pincel.setColor(m_color);
             pincel.setWidth(m_ancho);
@@ -132,8 +130,7 @@ void Principal::on_actionColor_triggered()
     m_color = QColorDialog::getColor(m_color, this, "Color del pincel",QColorDialog::ColorDialogOptions());
 }
 
-void Principal::on_actionAncho_triggered()
-{
+void Principal::on_actionAncho_triggered(){
     m_ancho = QInputDialog::getInt(this, "Ancho del pincel", "Ingrese el ancho del pincel", m_ancho, 1, 100);
 }
 void Principal::on_actionRectangulos_triggered(){

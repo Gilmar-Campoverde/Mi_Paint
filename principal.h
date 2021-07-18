@@ -35,22 +35,15 @@ protected:
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
 private slots:
+
     void on_actionGuardar_triggered();
-
     void on_actionSalir_triggered();
-
     void on_actionNuevo_triggered();
-
     void on_actionColor_triggered();
-
     void on_actionAncho_triggered();
-
     void on_actionRectangulos_triggered();
-
     void on_actionLibre_triggered();
-
     void on_actionLineas_triggered();
-
     void on_actionCircunferencia_triggered();
 
 private:
